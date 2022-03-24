@@ -1,5 +1,4 @@
 'use strict';
-
 const STATUSES = {
     TO_DO: 'To Do',
     IN_PROGRESS: 'In Progress',
@@ -26,7 +25,6 @@ const list = [{
     priority: PRIORITY.HIGH
 }]
 
-
 function changeStatus(name, status) {
     let taskIndex = list.findIndex(item => item.name === name);
     list[taskIndex].status = status;
@@ -37,7 +35,6 @@ function changePriority(name, priority) {
     list[taskIndex].priority = priority;
 }
 
-
 function addTask(name) {
     list.push({
         name,
@@ -45,7 +42,6 @@ function addTask(name) {
         priority: DEFAULT.PRIORITY
     });
 }
-
 
 function deleteTask(name) {
     let index = list.findIndex(item => item.name === name);
